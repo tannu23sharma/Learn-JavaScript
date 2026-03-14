@@ -10,17 +10,18 @@ score3 = Number(score3);
 //console.table([score3,typeof score3]); //NaN (Not a Number) is a special value that indicates that a value is not a valid number
 let score4 = null;
 score4 = Number(score4);
-//console.table([score4,typeof score4]);
+console.table([score4,typeof score4]); //0 number
 let score5 = undefined;
 score5 = Number(score5);
-//console.table([score5,typeof score5]);
+console.table([score5,typeof score5]); //NaN number
 
-/* In JavaScript, when you try to convert a value to a number using the Number() function, it follows certain rules:
+/* 
 - If the value is a string that can be parsed as a valid number (like "85" or "85.5"), it will be converted to that number.
 - If the string cannot be parsed as a valid number (like "85aa"), it will result in NaN (Not a Number).
 - If the value is null, it will be converted to 0.
 - If the value is undefined, it will be converted to NaN. */
 /* true = 1, false = 0 *, "" = 0 */
+
 /* for conversion
 Boolean(value) or !!value
 Number(value) or +value
@@ -54,9 +55,11 @@ console.log(true); //true
 console.log(+true); //1
 console.log(+""); //0
 
+/*equality operator (==) performs type coercion, it converts the operands to the same type before making the comparison. 
+The strict equality operator (===) does not perform type coercion and checks both value and type.*/
+
 console.table([null == 0, null === 0, null == undefined, null === undefined]);
 //false false true false
-/* In JavaScript, the equality operator (==) performs type coercion, which means it converts the operands to the same type before making the comparison. The strict equality operator (===) does not perform type coercion and checks both value and type.*/
 console.table([0 == false, 0 === false, "" == false, "" === false]);
 //true false true false
 console.table([undefined == false, undefined >= false]);
