@@ -2,32 +2,66 @@
 const name = 'John';
 const name2 = new String('Tannu'); //String object
 const word = " world";
-console.log(name + word);
+console.log(name + word); //"John world"
 console.log(`Hello ${name.toUpperCase()}, welcome to ${word}`);
-console.log(name2); //gives key value pair
-console.log(name2.valueOf()); //gives value
-console.log(name2[0]);
+console.log(name2); //gives key value pair, String {'Tannu'}
+console.log(name2.valueOf()); //gives value, "Tannu"
+console.log(name2[0]); //'T'
 console.log(name2.__proto__); //gives all the methods in browser console
 
-/*Methods
+let s1 = "Ajay"
+let s2 = new String("Ajay"); //String {'Ajay'}
 
+console.log(s1 == s2);  // true (type coercion)
+console.log(s1 === s2); // false (strict comparison)
+console.log(s1.localeCompare(s2)); // 0 (means they are equal lexicographically)
+
+/*Methods
 name2.length;
+charAt(index); // str[index]
+charCodeAt(index); //returns the Unicode value of the character at the specified index
+
+toString();
+str1.concat(str2) //str1 + str2
+
 toUpperCase();
 toLowerCase();
-indexOf();
-lastIndexOf();
-includes();
-startsWith();endsWith();
-charAt();
-substring(); //end not included
-slice(); negative index counts from end
+
+indexOf(); //index of first occurance, if not -1
+lastIndexOf(); //index of last 
+startsWith(); 
+endsWith(); //string ends with the characters of the specified string or not
+includes(); //contains given string or not
+
+substring(); //end not included, negative not allowed
+substr(start, length); //end not included
+slice(start,end) or slice(start); //End not included, negative index counts from end
+
 split(separator, limit); //returns array
+str.split('')
+['H', 'e', 'l', 'l', 'o', ',', ' ', 'm', 'y', ' ', 'n', 'a', 'm', 'e', ' ', 'i', 's', ' ', 'T', 'a', 'n', 'n', 'u']
+str.split(" ")
+['Hello,', 'my', 'name', 'is', 'Tannu']
+str.split(",")
+['Hello', ' my name is Tannu']
+
+
 trim(); //removes whitespace from both ends
-replace(); //replace first occurrence
-replaceAll(); //replace all occurrences
 trimStart(); //removes whitespace from start
 trimEnd(); //removes whitespace from end
-toArray(); //converts string to array
+
+replace("s1","s2"); //replace first occurrence of S1 with S2
+replaceAll(); //replace all occurrences
+
+name ="Tannu"
+name.anchor()
+'<a name="undefined">Tannu Sharma</a>'
+
+match()	//Search a string for a match regex.
+matchAll()	//Return all the iterators matching the reference regex.
+
+search()	//Search for a match in between regular expressions and a given string object.
+          // 1 if found, else -1
 */ 
 
 
