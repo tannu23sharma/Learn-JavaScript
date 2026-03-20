@@ -8,5 +8,8 @@
 7. Date and Time
 8. Queue and Switch
 9. Objects
-10. Functions
+10. Objects adv
+11. Functions
+12. Scopes
+13. IIFE
 */
