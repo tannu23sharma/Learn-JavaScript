@@ -11,5 +11,6 @@
 10. Objects adv
 11. Functions
 12. Scopes
-13. IIFE
+13. IIFE and miscellenious
+14. Higher order loops, Maps and Filter, Reduce
 */
